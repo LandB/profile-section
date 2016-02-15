@@ -1,0 +1,63 @@
+.profile-box
+  max-width: 1235px
+  flex-grow: 1
+  border-radius: 3px
+  box-shadow: 0px 0px 25px 0px rgba(black, 0.5)
+  height: 880px
+  background:
+    image: url(../images/profile-bg.jpg)
+    position: center
+    size: cover
+  position: relative
+  overflow: hidden
+
+  &--portfolio
+    position: absolute
+    background-color: #f7fcff
+    top: 0
+    left: -100%
+    bottom: 0
+    max-width: 400px
+    //overflow-y: auto
+    transition: all 350ms ease-in-out
+    &.active
+      left: 0
+
+  &--chat
+    position: absolute
+    background-color: #f7fcff
+    top: 0
+    right: -100%
+    bottom: 0
+    max-width: 500px
+    transition: all 350ms ease-in-out
+    &.active
+      right: 0
+  &--back-arrow
+    display: inline-block
+    margin: 10px
+    cursor: pointer
+    transition: all 250ms ease-in-out
+    svg
+      width: 50px
+      height: 50px
+    path
+      transition: all 150ms ease-in-out
+    &.active
+      transform: translateX(400px)
+    &:hover
+      path
+        fill: #2c86c5
+
+  &--profile
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    height: calc(880px - 128px)
+    transition: all 300ms ease-in-out
+    transform: translateX(0px)
+    &.active
+      transform: translateX(200px)
+    &.negativeActive
+      transform: translateX(-200px)

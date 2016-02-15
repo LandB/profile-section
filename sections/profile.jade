@@ -1,0 +1,45 @@
+mixin portoflioItem(item)
+  .portfolio--item
+    .portfolio--overlay
+    img(src="assets/images/#{item}")
+    
+mixin personComment(avatar, name, title, msg)
+  .msg-wrapper
+    .person
+      .avatar(style="background-image: url(assets/images/#{avatar}.png)")
+      .person-info
+        .name #{name}
+        .title #{title}
+    .person-msg
+      p #{msg}
+
+section#profile
+  .profile-box
+    .profile-box--portfolio.portfolio
+      +portoflioItem('portfolio-item.jpg')
+      +portoflioItem('portfolio-item2.png')
+      +portoflioItem('portfolio-item3.jpg')
+      +portoflioItem('portfolio-item2.png')
+    .profile-box--chat.chat
+      .chat--wrapper.chat-wrapper
+        +personComment('person1','Anelle Smith','Web Designer @ ABC Solutions','Donec rutrum congue leo eget malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Nulla quis lorem ut libero malesuada feugiat. Nulla porttitor accumsan tincidunt. Quisque velit nisi, pretium ut lacinia in, elementum id enim.')
+        +personComment('person2','Lisa Jackson','Freelance Graphic Designer, Traveler','Donec rutrum congue leo eget malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Nulla quis.')
+        +personComment('person1','Anelle Smith','Web Designer @ ABC Solutions','Donec rutrum congue leo eget malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Nulla quis lorem ut libero malesuada feugiat. Nulla porttitor accumsan tincidunt.')
+        +personComment('person2','Lisa Jackson','Freelance Graphic Designer @ google.com','Donec rutrum congue leo eget malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit.')
+      .profile-box--form.form-chat
+        textarea.form-chat--input(type="text" name="msg" placeholder="Type your message here")
+        button.form-chat--button(type="submit") Submit
+        
+      
+    .profile-box--back-arrow
+      include ../assets/images/chevron-left.svg
+    .profile-box--profile.profile
+      .profile--options.profile-options
+        .profile-options--showcase
+          include ../assets/images/briefcase.svg
+        .profile-options--avatar
+        .profile-options--chat
+          include ../assets/images/mail.svg
+      
+      h1.profile--name Miodrag Karalejić
+      p.profile--title UI/UX Design

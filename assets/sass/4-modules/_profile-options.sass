@@ -1,0 +1,48 @@
+.profile-options
+  display: flex
+  align-items: center
+  &--showcase
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 70px
+    width: 70px
+    border: 3px solid #fff
+    border-radius: 50%
+    cursor: pointer
+    transition: all 250ms ease-in-out
+
+    path
+      transition: all 150ms ease-in-out
+
+    &:hover, &.active
+      background-color: white
+      path
+        fill: #2c86c5
+
+  &--avatar
+    height: 220px
+    width: 220px
+    border-radius: 50%
+    border: 9px solid #97ccee
+    margin: 0 30px
+    background:
+      image: url(../images/profile-avatar.png)
+      position: center
+      size: cover
+  &--chat
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 70px
+    width: 70px
+    border: 3px solid #fff
+    border-radius: 50%
+    cursor: pointer
+    transition: all 250ms ease-in-out
+    path
+      transition: all 150ms ease-in-out
+    &:hover, &.active
+      background-color: white
+      path
+        fill: #2c86c5
