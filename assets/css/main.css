@@ -455,6 +455,15 @@ h1, h2, h3, h4, h5, h6, p {
   background-size: cover;
 }
 
+@media sceen and (max-width: 1240px) {
+  .profile-wrapper {
+    height: initial;
+  }
+  .profile-wrapper section#profile {
+    display: block;
+  }
+}
+
 .profile-box {
   max-width: 1235px;
   flex-grow: 1;
@@ -535,7 +544,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .profile-box--profile.negativeActive {
-  transform: translateX(-200px);
+  transform: translateX(-250px);
 }
 
 .profile {
