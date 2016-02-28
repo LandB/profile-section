@@ -23,7 +23,7 @@ $(function() {
 
 
 function portfolioSideBar(){
-  $('.profile-options--showcase').on('click', function(){
+  $('.profile-options--showcase, .mobile-back-btn--portfolio').on('click', function(){
     $('.profile-box--profile').removeClass('negativeActive');
     $('.profile-box--chat').removeClass('active');
     $('.profile-options--chat').removeClass('active');
@@ -31,12 +31,13 @@ function portfolioSideBar(){
     $('.profile-box--profile').toggleClass('active');
     $('.profile-box--back-arrow').toggleClass('active');
     $('.profile-options--showcase').toggleClass('active');
+
   });
 }
 
 
 function chatSideBar(){
-  $('.profile-options--chat').on('click', function(){
+  $('.profile-options--chat, .mobile-back-btn--chat').on('click', function(){
     $('.profile-box--portfolio').removeClass('active');
     $('.profile-box--profile').removeClass('active');
     $('.profile-box--back-arrow').removeClass('active');
