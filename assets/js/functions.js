@@ -31,28 +31,21 @@ function portfolioSideBar(){
     $('.profile-box--profile').toggleClass('active');
     $('.profile-box--back-arrow').toggleClass('active');
     $('.profile-options--showcase').toggleClass('active');
-
   });
 }
 
 
 function chatSideBar(){
   $('.profile-options--chat').on('click', function(){
-
     $('.profile-box--portfolio').removeClass('active');
     $('.profile-box--profile').removeClass('active');
     $('.profile-box--back-arrow').removeClass('active');
     $('.profile-options--showcase').removeClass('active');
-
-
     $('.profile-box--chat').toggleClass('active');
     $('.profile-box--profile').toggleClass('negativeActive');
     $('.profile-options--chat').toggleClass('active');
   });
 }
-
-
-
 
 function animatedScrollBar(){
   $('.profile-box--portfolio').on('mouseover', function(){

@@ -16,13 +16,18 @@ mixin personComment(avatar, name, title, msg)
 section#profile
   .profile-box
     .profile-box--portfolio.portfolio
-      .mobile-back-btn Back
-      +portoflioItem('portfolio-item.jpg')
-      +portoflioItem('portfolio-item2.png')
-      +portoflioItem('portfolio-item3.jpg')
-      +portoflioItem('portfolio-item2.png')
+      .mobile-back-btn.mobile-back-btn--portfolio
+        include ../assets/images/chevron-left.svg
+      .portfolio--wrapper
+        +portoflioItem('portfolio-item.jpg')
+        +portoflioItem('portfolio-item2.png')
+        +portoflioItem('portfolio-item3.jpg')
+        +portoflioItem('portfolio-item2.png')
+        +portoflioItem('portfolio-item.jpg')
+        +portoflioItem('portfolio-item3.jpg')
     .profile-box--chat.chat
-      .mobile-back-btn Back
+      .mobile-back-btn.mobile-back-btn--chat
+        include ../assets/images/chevron-left.svg
       .chat--wrapper.chat-wrapper
         +personComment('person1','Anelle Smith','Web Designer @ ABC Solutions','Donec rutrum congue leo eget malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Nulla quis lorem ut libero malesuada feugiat. Nulla porttitor accumsan tincidunt. Quisque velit nisi, pretium ut lacinia in, elementum id enim.')
         +personComment('person2','Lisa Jackson','Freelance Graphic Designer, Traveler','Donec rutrum congue leo eget malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Nulla quis.')
