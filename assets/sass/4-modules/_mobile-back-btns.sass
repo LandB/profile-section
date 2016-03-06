@@ -1,5 +1,6 @@
 .mobile-back-btn
   cursor: pointer
+  display: none
   svg
     transition: all 250ms ease
     width: 40px
@@ -20,3 +21,7 @@
     &:hover
       svg
         transform: translateX(30px) rotate(180deg)
+
+@media screen and (max-width: 800px)
+  .mobile-back-btn
+    display: block
