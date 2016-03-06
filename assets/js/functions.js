@@ -9,7 +9,6 @@ $(function() {
 
   portfolioSideBar();
   chatSideBar();
-  animatedScrollBar();
 
 });
 
@@ -46,10 +45,4 @@ function chatSideBar(){
     $('.profile-box--profile').toggleClass('negativeActive');
     $('.profile-options--chat').toggleClass('active');
   });
-}
-
-function animatedScrollBar(){
-  $('.profile-box--portfolio').on('mouseover', function(){
-    $('::-webkit-scrollbar').fadeIn();
-  })
 }

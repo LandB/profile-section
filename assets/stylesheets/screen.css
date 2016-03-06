@@ -923,7 +923,7 @@ h1, h2, h3, h4, h5, h6, p {
 @media screen and (max-width: 520px) {
   /* line 51, ../sass/4-modules/_chat.sass */
   .chat .chat-wrapper {
-    height: calc(100% - 226px);
+    height: calc(100% - 210px);
   }
 }
 /* line 1, ../sass/4-modules/_form-chat.sass */
@@ -970,6 +970,10 @@ h1, h2, h3, h4, h5, h6, p {
   /* line 32, ../sass/4-modules/_form-chat.sass */
   .form-chat--input {
     height: 80px;
+  }
+  /* line 35, ../sass/4-modules/_form-chat.sass */
+  .form-chat--button {
+    padding: 10px 30px;
   }
 }
 /* line 1, ../sass/4-modules/_mobile-back-btns.sass */
