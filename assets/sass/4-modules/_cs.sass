@@ -1,0 +1,51 @@
+.cs
+  max-width: 1230px
+  margin: 0 auto
+  background: $cs-bg-light
+  height: calc(100vh - 260px)
+  position: relative
+  color: rgba(#fff, 0.7)
+  z-index: 1
+  flex-direction: column
+  display: flex
+  &::after
+    content: ''
+    position: absolute
+    top: 0
+    right: 0
+    left: 0
+    bottom: 0
+    z-index: -1
+    opacity: 0.1
+    background:
+      image: url(../images/coming-soon.jpg)
+      size: cover
+      position: center
+
+  &--logo
+    height: 90px
+    background:
+      image: url(../images/outspyr.png)
+      repeat: no-repeat
+      position: 30px 50%
+
+  &--body
+    flex-grow: 1
+
+
+@media screen and (max-width: 800px)
+  .cs
+    height: calc(100vh - 20px)
+
+@media screen and (max-height: 800px)
+  .cs
+    height: calc(100vh - 20px)
+
+
+    
+@media screen and (max-width: 420px)
+  .cs
+    text-align: center
+    &--logo
+      background:
+        position: 50% 50%

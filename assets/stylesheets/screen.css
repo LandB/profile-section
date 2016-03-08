@@ -590,6 +590,44 @@ h1, h2, h3, h4, h5, h6, p {
     margin: 0 auto;
   }
 }
+/* line 2, ../sass/3-layout/_cs-page.sass */
+.cs-wrapper section#cs {
+  position: relative;
+  background-color: #111418;
+  color: rgba(255, 255, 255, 0.8);
+  height: 100vh;
+  z-index: 1;
+  padding: 130px 10px;
+}
+/* line 10, ../sass/3-layout/_cs-page.sass */
+.cs-wrapper section#cs::after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  opacity: 0.1;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-image: url(../images/coming-soon-blur.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+@media screen and (max-width: 800px) {
+  /* line 26, ../sass/3-layout/_cs-page.sass */
+  .cs-wrapper section#cs {
+    padding: 10px;
+    height: 100vh;
+  }
+}
+@media screen and (max-height: 800px) {
+  /* line 32, ../sass/3-layout/_cs-page.sass */
+  .cs-wrapper section#cs {
+    padding: 10px;
+    height: 100vh;
+  }
+}
 /* line 1, ../sass/4-modules/_profile-box.sass */
 .profile-box {
   max-width: 1235px;
@@ -1018,4 +1056,230 @@ h1, h2, h3, h4, h5, h6, p {
   .mobile-back-btn {
     display: block;
   }
+}
+/* line 1, ../sass/4-modules/_cs.sass */
+.cs {
+  max-width: 1230px;
+  margin: 0 auto;
+  background: #1f2429;
+  height: calc(100vh - 260px);
+  position: relative;
+  color: rgba(255, 255, 255, 0.7);
+  z-index: 1;
+  flex-direction: column;
+  display: flex;
+}
+/* line 11, ../sass/4-modules/_cs.sass */
+.cs::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  opacity: 0.1;
+  background-image: url(../images/coming-soon.jpg);
+  background-size: cover;
+  background-position: center;
+}
+/* line 25, ../sass/4-modules/_cs.sass */
+.cs--logo {
+  height: 90px;
+  background-image: url(../images/outspyr.png);
+  background-repeat: no-repeat;
+  background-position: 30px 50%;
+}
+/* line 32, ../sass/4-modules/_cs.sass */
+.cs--body {
+  flex-grow: 1;
+}
+
+@media screen and (max-width: 800px) {
+  /* line 37, ../sass/4-modules/_cs.sass */
+  .cs {
+    height: calc(100vh - 20px);
+  }
+}
+@media screen and (max-height: 800px) {
+  /* line 41, ../sass/4-modules/_cs.sass */
+  .cs {
+    height: calc(100vh - 20px);
+  }
+}
+@media screen and (max-width: 420px) {
+  /* line 47, ../sass/4-modules/_cs.sass */
+  .cs {
+    text-align: center;
+  }
+  /* line 49, ../sass/4-modules/_cs.sass */
+  .cs--logo {
+    background-position: 50% 50%;
+  }
+}
+/* line 1, ../sass/4-modules/_cs-body.sass */
+.cs-body {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+/* line 5, ../sass/4-modules/_cs-body.sass */
+.cs-body--logo {
+  margin-left: 50px;
+  max-width: 330px;
+  flex-grow: 1;
+}
+/* line 9, ../sass/4-modules/_cs-body.sass */
+.cs-body--logo img {
+  opacity: 0.2;
+  max-width: 100%;
+  height: auto;
+}
+/* line 13, ../sass/4-modules/_cs-body.sass */
+.cs-body--form {
+  max-width: 500px;
+  margin-right: 50px;
+}
+
+@media screen and (max-width: 745px) {
+  /* line 22, ../sass/4-modules/_cs-body.sass */
+  .cs-body--logo {
+    display: none;
+  }
+  /* line 25, ../sass/4-modules/_cs-body.sass */
+  .cs-body--form {
+    margin: 0 10px;
+  }
+}
+@media screen and (max-height: 550px) {
+  /* line 32, ../sass/4-modules/_cs-body.sass */
+  .cs-body--logo img {
+    width: 70%;
+  }
+}
+/* line 3, ../sass/4-modules/_cs-body-form.sass */
+.cs-body-form--heading {
+  font-size: 36px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+/* line 9, ../sass/4-modules/_cs-body-form.sass */
+.cs-body-form--lead {
+  font-size: 18px;
+  font-weight: 500;
+}
+/* line 13, ../sass/4-modules/_cs-body-form.sass */
+.cs-body-form--p {
+  font-size: 14px;
+  margin: 20px 0;
+}
+
+@media screen and (max-width: 365px) {
+  /* line 20, ../sass/4-modules/_cs-body-form.sass */
+  .cs-body-form--heading {
+    font-size: 25px;
+  }
+  /* line 22, ../sass/4-modules/_cs-body-form.sass */
+  .cs-body-form--lead {
+    font-size: 14px;
+  }
+  /* line 24, ../sass/4-modules/_cs-body-form.sass */
+  .cs-body-form--p {
+    font-size: 10px;
+  }
+}
+/* line 1, ../sass/4-modules/_cs-input-group.sass */
+.cs-input-group {
+  position: relative;
+  margin-top: 20px;
+}
+/* line 4, ../sass/4-modules/_cs-input-group.sass */
+.cs-input-group--input {
+  width: 100%;
+  font-size: 14px;
+  background: none;
+  border: 1px solid rgba(204, 204, 204, 0.2);
+  border-radius: 30px;
+  padding: 15px 20px;
+  font-weight: 500;
+  transition: all 150ms ease;
+}
+/* line 13, ../sass/4-modules/_cs-input-group.sass */
+.cs-input-group--input:focus {
+  outline: none;
+}
+/* line 15, ../sass/4-modules/_cs-input-group.sass */
+.cs-input-group--input:focus, .cs-input-group--input:hover {
+  border: 1px solid rgba(204, 204, 204, 0.5);
+}
+/* line 18, ../sass/4-modules/_cs-input-group.sass */
+.cs-input-group--btn {
+  border: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: 0 40px;
+  border-radius: 0 30px 30px 50px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 16px;
+  background: -webkit-linear-gradient(#2589c2, #237aad);
+  background: -o-linear-gradient(#2589c2, #237aad);
+  background: -moz-linear-gradient(#2589c2, #237aad);
+  background: linear-gradient(#2589c2, #237aad);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$gradient-top', endColorstr='$gradient-bot', GradientType=0);
+}
+
+@media screen and (max-width: 365px) {
+  /* line 39, ../sass/4-modules/_cs-input-group.sass */
+  .cs-input-group--input {
+    font-size: 12px;
+  }
+  /* line 41, ../sass/4-modules/_cs-input-group.sass */
+  .cs-input-group--btn {
+    font-size: 14px;
+    padding: 0 25px;
+  }
+}
+/* line 1, ../sass/4-modules/_cs-footer.sass */
+.cs-footer {
+  display: flex;
+  align-items: center;
+  margin: 15px 30px;
+}
+/* line 6, ../sass/4-modules/_cs-footer.sass */
+.cs-footer--copyright {
+  color: rgba(255, 255, 255, 0.5);
+  flex-grow: 1;
+}
+
+/* line 1, ../sass/4-modules/_cs-socials.sass */
+.cs-socials {
+  display: flex;
+  flex-direction: row;
+}
+/* line 4, ../sass/4-modules/_cs-socials.sass */
+.cs-socials svg {
+  width: 20px;
+  height: 20px;
+}
+/* line 7, ../sass/4-modules/_cs-socials.sass */
+.cs-socials svg path {
+  transition: all 150ms ease;
+}
+
+/* line 10, ../sass/4-modules/_cs-socials.sass */
+.cs-social {
+  margin-right: 15px;
+  cursor: pointer;
+}
+/* line 13, ../sass/4-modules/_cs-socials.sass */
+.cs-social:last-child {
+  margin-right: 0px;
+}
+/* line 18, ../sass/4-modules/_cs-socials.sass */
+.cs-social:hover svg path {
+  opacity: 1;
 }

@@ -1,0 +1,33 @@
+.cs-body
+  display: flex
+  justify-content: space-around
+  align-items: center
+  &--logo
+    margin-left: 50px
+    max-width: 330px
+    flex-grow: 1
+    img
+      opacity: 0.2
+      max-width: 100%
+      height: auto
+  &--form
+    max-width: 500px
+    margin-right: 50px
+
+
+
+
+@media screen and (max-width: 745px)
+  .cs-body
+    &--logo
+      display: none
+
+    &--form
+      margin: 0 10px
+
+
+@media screen and (max-height: 550px)
+  .cs-body
+    &--logo
+      img
+        width: 70%

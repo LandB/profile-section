@@ -1,0 +1,34 @@
+.cs-wrapper
+  section#cs
+    position: relative
+    background:
+      color: $cs-bg
+    color: rgba(#fff, 0.8)
+    height: 100vh
+    z-index: 1
+    padding: 130px 10px
+    &::after
+      z-index: -1
+      content: ''
+      position: absolute
+      opacity: 0.1
+      top: 0
+      right: 0
+      left: 0
+      bottom: 0
+      background:
+        image: url(../images/coming-soon-blur.jpg)
+        size: cover
+        position: center
+
+@media screen and (max-width: 800px)
+  .cs-wrapper
+    section#cs
+      padding: 10px
+      height: 100vh
+
+@media screen and (max-height: 800px)
+  .cs-wrapper
+    section#cs
+      padding: 10px
+      height: 100vh

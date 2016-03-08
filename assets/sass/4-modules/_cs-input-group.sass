@@ -1,0 +1,43 @@
+.cs-input-group
+  position: relative
+  margin-top: 20px
+  &--input
+    width: 100%
+    font-size: 14px
+    background: none
+    border: 1px solid rgba(#ccc, 0.2)
+    border-radius: 30px
+    padding: 15px 20px
+    font-weight: 500
+    transition: all 150ms ease
+    &:focus
+      outline: none
+    &:focus, &:hover
+      border: 1px solid rgba(#ccc, 0.5)
+
+  &--btn
+    border: 0
+    position: absolute
+    right: 0
+    top: 0
+    bottom: 0
+    padding: 0 40px
+    border-radius: 0 30px 30px 50px
+    text-transform: uppercase
+    font-weight: bold
+    font-size: 16px
+    background: -webkit-linear-gradient($gradient-top, $gradient-bot)
+    background: -o-linear-gradient($gradient-top, $gradient-bot)
+    background: -moz-linear-gradient($gradient-top, $gradient-bot)
+    background: linear-gradient($gradient-top, $gradient-bot)
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$gradient-top', endColorstr='$gradient-bot', GradientType=0)
+
+
+
+@media screen and (max-width: 365px)
+  .cs-input-group
+    &--input
+      font-size: 12px
+    &--btn
+      font-size: 14px
+      padding: 0 25px
